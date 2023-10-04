@@ -7,3 +7,5 @@ export const colors = {
   red: '#FF8080',
   blackFaded: '#272727',
 };
+
+// test
