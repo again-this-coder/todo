@@ -7,11 +7,17 @@ import {Screens} from '../screens';
 import TodoList from '../../components/todoList/TodoList';
 import {fakeData} from '../../components/todoList/fakeData';
 import PushNotification from 'react-native-push-notification';
+import {getTodos} from '../../features/todos/todosSlice';
+import {useDispatch, useSelector} from 'react-redux';
 
 const HomeScreen = ({navigation}: {navigation: any}) => {
   const handleAddNewTask = () => {
     navigation.navigate(Screens.CREATE_TASK_SCREEN);
   };
+
+  const dispatch = useDispatch();
+
+  console.log(todoList);
 
   const createChannels = () => {
     PushNotification.createChannel(
