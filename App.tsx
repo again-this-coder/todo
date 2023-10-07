@@ -4,7 +4,11 @@ import {store} from './store';
 import {Provider} from 'react-redux';
 
 function App(): JSX.Element {
-  return <RootNavigation />;
+  return (
+    <Provider store={store}>
+      <RootNavigation />
+    </Provider>
+  );
 }
 
 export default App;
